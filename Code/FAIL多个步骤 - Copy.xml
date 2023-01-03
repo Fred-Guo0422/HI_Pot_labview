@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vCheckTester xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="4.0" xmlns="Valor.vCheckTester.xsd" OperatorNumber="admin">
+<Unit Timestamp="2020-07-17T14:35:07" SerialNumber="KC3404KB700731" DateTimeStart="2020-07-17T14:35:11" DateTimeEnd="2020-07-17T14:35:07" xmlns="Valor.vCheckTester.xsd" StatusCode="FAIL">
+<Symptom Name="Voltage Fail" Type="Unknown">
+<Message>LowerLimit=5 UpperLimit=5.5 value=0</Message>
+<Measurement DateTime="2020-07-14T13:13:44" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.332" Name="Read Voltage" StatusCode="PASS" />
+<Measurement DateTime="2020-07-17T14:35:07" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.199" Name="Read Voltage" StatusCode="FAIL" />
+<Measurement DateTime="2020-07-14T13:13:44" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.332" Name="Read Voltage" StatusCode="PASS" />
+</Symptom>
+<Header TestFixtureNumber="FIX-0003670618"/>
+</Unit>
+</vCheckTester>

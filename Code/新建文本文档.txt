@@ -1,0 +1,364 @@
+读取10个通道测试结果
+SAF:CHAN003:RES:ALL?
+示例:输入命令SAF:CHAN003:RES:ALL?
+测试器返回116,116,116,116,116,116,116。
+描述:返回的字符串是CH3 STEP1~ ste10的判断结果
+地址0主机，即通过，通过，通过，通过，通过，通过，通过，通过，通过，通过。
+
+例如:输入命令SAF:CHAN004:RES:ALL:MMET?
+测试器返回7.000000E-05, 5.000000E-05, 4.000000E-05，
+3.000000E-05, 2.000000E-05, 1.000000E-05, 2.000000E-04，
+7.000000 e-05, 5.000000 e-04, 3.000000 e-04。
+说明:返回的字符串是测量仪表查询的结果
+CH4 STEP1~ ste10 from Address 0 host，即0.07mA, 0.05 ma，
+0.04mA, 0.03mA, 0.02mA, 0.01mA, 0.20mA, 0.07mA, 0.50mA，
+0.30 ma。
+
+
+读取模试
+SAF:CHAN005:RES:ALL:MODE?
+The tester returns OSC,AC,AC,PA,DC,DC,DC,PA,IR,IR.
+例如:输入命令SAF:CHAN005:RES:ALL:MODE?
+该测试仪返回OSC,AC,AC,PA,DC,DC,DC,PA,IR,IR。
+描述:返回的字符串是CH5的地址0主机的模式设置
+STEP1~STEP10，即OSC模式、AC模式、AC模式、PA模式、
+直流模式、直流模式、直流模式、PA模式、IR模式、IR模式。
+
+
+例如:输入命令SAF:CHAN101:RES:ALL:OMET?
+测试器返回5.100000E+01, 5.000000E+02, 1.000000E+02，
+2.000000E+02, 3.000000E+02, 4.000000E+02, 5.100000E+02，
+6.000000 e + 02, 7.000000 e + 2日8.000000 e + 02。
+描述:返回的字符串是CH1查询输出仪表的结果
+从地址1主机STEP1~STEP10，分别为0.051kV, 0.500kV，
+0.100kV, 0.200kV, 0.300kV, 0.400kV, 0.510kV, 0.600kV, 0.700kV，
+0.800 kv。
+
+例如:输入命令SAF:CHAN005:RES:ALL:TIME: dwell ?
+测试器返回5.000000E+00, 5.000000E+00, 5.000000E+00，
+1.000000E+00, 1.000000E+00, 1.000000E+00, 1.000000E+00，
+2.000000 e + 00, 2.000000 e + 00, 2.000000 e + 00。
+描述:返回的字符串是CH5的地址0主机测试的驻留时间
+STEP1~STEP10，即5.0秒，5.0秒，5.0秒，1.0秒，1.0秒，
+1秒，1秒，2秒，2秒，2秒。
+
+例如:输入命令SAF:CHAN005:RES:ALL:TIME:FALL?
+测试器返回1.500000E+00, 1.500000E+00, 1.500000E+00，
+2.000000E+00, 2.000000E+00, 2.000000E+00, 5.000000E-01，
+5.000000 e-01, 5.000000 e-01, 5.000000 e-01。
+描述:返回的字符串是地址0主机测试的电压下降时间
+CH5 STEP1~ ste10，也就是1.5秒，1.5秒，1.5秒，2.0秒，2.0秒，
+2。0秒，0.5秒，0.5秒，0.5秒，0.5秒。
+
+例如:输入命令SAF:CHAN005:RES:ALL:TIME:RAMP?
+测试器返回5.000000E+00, 5.000000E+00, 5.000000E+00，
+1.000000E+00, 1.000000E+00, 1.000000E+00, 2.000000E+00，
+2.000000 e + 00, 2.000000 e + 00, 2.000000 e + 00
+描述:返回的字符串是电压上升到
+在CH5的地址0上设置STEP1~ ste10，分别为0.5秒，0.5秒，
+0.5秒，1.0秒，1.0秒，1.0秒，2.0秒，2.0秒，2.0秒，2.0秒，2.0秒。
+
+例如:输入命令SAF:CHAN005:RES:ALL:TIME?
+测试器返回3.000000E+00, 3.000000E+00, 1.000000E+00，
+2.500000E+00, 2.500000E+00, 1.000000E+00, 1.000000E+00, 1.000000E+00，
+0.500000 e + 00, 3.000000 e + 00, 1.000000 e + 00。
+描述:返回的字符串是测试CH5所需的时间
+地址0的STEP1~ ste10，即3.0秒，3.0秒，1.0秒，
+2.5秒，2.5秒，1.0秒，1.0秒，0.5秒，3.0秒，1.0秒。
+
+示例:输入命令SAF001:RES:AREP ON
+描述:设置地址为0的主机返回测试结果
+测试完成后自动执行。如果所有通道的测试结果
+地址0主机是通过，它返回“通过”或“失败”将返回。
+
+(源)::安全(通道):& lt; m&gt;:结果:AREPort吗?
+如果自动报告测试结果，则查询设备。返回值是1或0。
+(只适用于RS232接口)
+示例:输入命令SAF001:RES:AREP?
+测试人员返回1。
+说明:返回的1表示地址0主机将报告测试结果
+测试完成后自动完成。
+(源)::安全(通道):& lt; m&gt;:结果:完成了吗?
+如果所有设置全部执行，则查询设备。返回值是1或0。
+例如:输入命令SAF001:RES:COMP?
+测试人员返回1。
+说明:返回的1表示地址0主机已经完成执行
+所有设置。
+
+例如:输入命令SAF:CHAN003:RES:STEP3?
+测试器返回116。
+说明:返回的结果表示CH3步骤3的判断
+地址0主机是通过。
+
+例如:输入命令SAF:CHAN004:RES:STEP3:MMET?
+测试器返回4.000000E-05。
+说明:返回的结果为CH4的读数
+步骤3对于地址0主机是0.04mA。
+
+例如:输入命令SAF:CHAN001:RES:STEP3:OMET?
+测试器返回1.000000E+02。
+说明:返回结果为CH1的输出抄表
+步骤3对于地址0主机为0.100kV。
+
+例如:输入命令SAF:CHAN005:RES:STEP1:TIME:DWEL?
+测试器返回5.000000E-01
+说明:返回的结果表示CH5步骤1测试的驻留时间
+地址0主机是0.5秒。
+
+例如:输入命令SAF:CHAN005:RES:STEP4:TIME:FALL?
+测试器返回2.000000E+00。
+说明:返回结果为CH5步骤4电压下降的时间
+对于地址0主机是2.0秒。
+
+例如:输入命令SAF:CHAN005:RES:STEP1:TIME:RAMP?
+测试器返回5.000000E-01。
+说明:返回结果为CH5步骤1电压斜坡时间
+对于地址0主机是0.5秒。
+
+例如:输入命令SAF:CHAN005:RES:STEP2:TIME?
+测试器返回3.000000E+00。
+说明:返回结果为CH5步骤2所需的测试时间
+地址0主机是3.0秒。
+
+例如:输入命令SAF:FRAM0:RES:STEP3?
+测试器返回116,116,116,116,116,116,116。
+描述:返回的结果是所有步骤3的判断结果
+地址0主机通道通过。
+
+
+例如:输入命令SAF:FRAME0:RES:STEP3:MMET?
+测试器返回7.000000E-05, 5.000000E-05, 4.000000E-05，
+3.000000E-05, 2.000000E-05, 1.000000E-05, 2.000000E-04，
+7.000000 e-05, 5.000000 e-04, 3.000000 e-04。
+说明:返回结果为查询的测量仪表
+地址0主机STEP3所有通道的读数为0.07mA，
+0、05mA、0.04mA、0.03mA、0.02mA、0.01mA、0.20mA、0.07mA、
+0.50, 0.30。
+
+
+Example:  Input the command SAF:FRAM1:RES:STEP3:OMET?
+The tester returns 5.100000E+01, 5.000000E+01, 5.000000E+01,
+5.200000E+01, 5.000000E+01, 4.900000E+01, 5.100000E+01,
+4.900000E+01, 5.000000E+01, 4.900000E+01.
+Description: The returned result indicates the queried OUTPUT METER readings
+for all channels STEP3 of Address 1 host is 0.051kV, 0.050kV,
+0.050kV, 0.052kV, 0.050kV, 0.049kV, 0.051kV, 0.049kV, 0.050kV,
+0.049kV.
+
+Example:  Input the command SAF:FRAM0:RES:STEP1:TIME:DWEL?
+The tester returns 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00.
+Description: The returned result indicates the queried DWELL times tested by
+STEP 1 for all channels of Address 0 host are 3sec, 3sec, 3sec, 3sec,
+3sec, 3sec, 3sec, 3sec, 3sec, 3sec.
+
+
+Example:  Input the command SAF:FRAM0:RES:STEP4:TIME:FALL?
+The tester returns 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00.
+Description: The returned result indicates the tested voltage fall times of STEP 4
+for all channels of Address 0 host are 3sec, 3sec, 3sec, 3sec, 3sec,
+3sec, 3sec, 3sec, 3sec, 3sec.
+
+Example:  Input the command SAF:FRAM0:RES:STEP1:TIME:RAMP?
+The tester returns 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00.
+Description: The returned result indicates the time required for voltage to ramp up
+to the set in STEP 1 for all channels of Address 0 host are 3sec, 3sec,
+3sec, 3sec, 3sec, 3sec, 3sec, 3sec, 3sec, 3sec.
+
+Example:  Input the command SAF:FRAM0:RES:STEP2:TIME?
+The tester returns 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00, 3.000000E+00,
+3.000000E+00, 3.000000E+00, 3.000000E+00.
+Description:  The returned result indicates the test time required for STEP 2 of all
+channels for Address 0 host is 3sec, 3sec, 3sec, 3sec, 3sec, 3sec,
+3sec, 3sec, 3sec, 3sec.
+
+
+开始测试
+Example:  Input the command SAF:STAR
+Description: It means to start the host test.
+
+Example:  Input the command SAF:STAR:CORR:OPEN GET
+Description: It means to start the function of getting correction value.
+
+Example:  Input the command SAF:STAR:CORR:OPEN?
+The tester returns 0.
+Description: The returned 0 means the correction hasn’t been done on the host.
+
+Example: Input the command SAF:STAR:CORR:SAMP GET
+Description: It means to start the GET Cs function in Open Short Check mode.
+
+例如:输入命令SAF:STAR:CORR:SAMP ?
+测试人员返回1
+说明:返回1表示GET Cs函数已经在Open中启动
+短的检查模式。
+
+例如:输入命令SAF:STAT?
+测试人员返回运行状态。
+说明:返回运行表示主机导通测试在礼物。
+
+例如:输入命令SAF:STEP1:AC:CHAN (@001,002,201:210)
+说明:表示在步骤1中启动高压输出通道CH1、CH2
+对于地址0主机，也启动高压输出通道
+地址2的CH1~CH10。
+
+例如:输入命令SAF:STEP1:AC:CHAN:DEF:ON
+说明:在测试中使用DEF. CHANNELS选项设置步骤1
+高压输出通道设置控制。
+
+
+Example:  Input the command SAF:STEP1:AC:CHAN:DEF:STAT?
+The tester returns 1.
+Description: The returned 1 means STEP 1 is using the option of DEF.
+CHANNELS in TEST CONTROL for setting high voltage output
+
+Example:  Input the command SAF:STEP1:AC:CHAN:PSC P,S
+Description:  It means to set the scan channel of STEP 1 to P?S.
+
+Example:  Input the command SAF:STEP1:AC:CHAN:PSC?
+The tester returns P,S.
+Description:  It means the scan channel of STEP 1 is set to P?S.
+
+量程:19020量程50~5000,19021量程50~6000。
+例如:输入命令SAF:STEP1:AC 3000。
+说明:是指将交流耐压试验所需的电压设置为
+主机步骤1为3kV。
+
+Example:  Input the command SAF:STEP1:AC?
+The tester returns 3.000000E+03.
+Description: The returned 3.000000E+03 means the voltage required by AC
+withstand voltage test for the host STEP 1 is 3kV.
+
+Range: 0 or 0.001~0.020, 0 is OFF.
+Example:  Input the command SAF:STEP1:AC:LIM:ARC 0.004.
+Description: It means the ARC test value in AC Mode for the host STEP 1 is 4mA.
+
+Example: Input the command SAF:STEP1:AC:LIM:ARC?
+The tester returns 4.000000E-03.
+Description: The returned 4.000000E-03 means the ARC test value for the host
+STEP 1 is 4mA.
+
+Range: The range of 19020 is 0.000001~0.01 and the range of 19021 is0.000001~0.008.
+Example: Input the command SAF:STEP1:AC:LIM 0.01.
+Description: It means the high limit of AC withstand leakage current for the host
+STEP 1 is 10mA.
+
+Example: Input the command SAF:STEP1:AC:LIM?
+The tester returns 1.000000E-02.
+Description: The returned 1.000000E-02 means the high limit of AC withstand
+leakage current for the host STEP 1 is 10mA.
+
+Range: The range of 19020 is 0.000001~0.01 and the 19021 range is
+0.000001~0.008 (the low limit of leakage current ≤ the set high limit.)
+Example: Input the command SAF:STEP1:AC:LIM:LOW 0.00001.
+Description: It means the low limit of AC withstand leakage current for the host
+STEP 1 is 0.01mA.
+
+
+Example: Input the command SAF:STEP2:AC:LIM:LOW?
+The tester returns 1.000000E-05.
+Description: The returned 1.000000E-05 means the low limit of AC withstand
+leakage current for the host STEP 2 is 0.01mA.
+
+Range: 0 or 0.1~999.9, 0 is OFF.
+Example: Input the command SAF:STEP1:AC:TIME:FALL 3
+Description: It means the time required for set voltage to fall to 0 in the host STEP
+1 is 3.0sec.
+
+Example: Input the command SAF:STEP1:AC:TIME:FALL?
+The tester returns 3.000000E+00.
+Description: The returned 3.000000E+00 means the time required for the set
+voltage to fall to 0 in the host STEP 1 is 3.0sec.
+
+Range:  0 or 0.1~999.9, 0 is OFF.
+Example: Input the command SAF:STEP1:AC:TIME:RAMP 5.
+Description: It means the time required for testing the voltage to ramp up to set for the host STEP 1 is 5.0sec.
+
+Example: Input the command SAF:STEP1:AC:TIME:RAMP?
+The tester returns 5.000000E+00.
+Description: The returned 5.000000E+00 means the time required for the voltage
+to ramp up to the set for the host STEP 1 is 5.0sec.
+
+Range: 0 or 0.03~999.9, 0 is CONTINUE.
+Example: Input the command SAF:STEP1:AC:TIME 10.
+Description: It means the time required for test in host STEP 1 is 10.0sec.
+
+Example: Input the command SAF:STEP1:AC:TIME?
+The tester returns 1.000000E+01.
+Description: The returned 1.000000E+01 means the time required for test in the
+host STEP 1 is 10.0sec.
+
+Example: Input the command SAF:STEP2:DC:CHAN (@001,002,201:210).
+Description: It means the high voltage output channels CH1 & CH2 of Address 0
+host in STEP 2 are enabled and the high voltage output channels
+CH1~CH10 of Address 2 host are enabled as well.
+
+Example: Input the command SAF:STEP2:DC:CHAN?
+The tester returns (@001,002,201:210).
+Description: The returned result indicates the high voltage output channels CH1 &
+CH2 of Address 0 host in STEP 2 are enabled and the high voltage
+output channels CH1~CH10 of Address 2 host are enabled as well.
+
+Example: Input the command SAF:STEP2:DC:CHAN:DEF:ON
+Description: It means to set STEP 2 with high voltage channel settings in DEF.
+CHANNELS options under TEST CONTROL.
+
+Example: Input the command SAF:STEP2:DC:CHAN:DEF:STAT?
+The tester returns 1.
+Description: The returned 1 means STEP 2 is using the high voltage channel
+settings in DEF. CHANNELS options under TEST CONTROL.
+
+[:SOURce]:SAFety:STEP<n>:DC:CHANnel:PSC P | S | PS, S | C | SC
+It sets the scan channel status for selected STEP.
+Example:  Input the command SAF:STEP1:DC:CHAN:PSC P,S
+Description:  It means to set the scan channel of STEP 1 to P?S.
+
+[:SOURce]:SAFety:STEP<n>:DC:CHANnel:PSC?
+It queries the scan channel status for selected STEP.
+Example:  Input the command SAF:STEP1:DC:CHAN:PSC?
+The tester returns P,S.
+Description:  It means the scan channel of STEP 1 is set to P?S.
+
+Range: 50~6000 for 19020, 50~8000 for 19022.
+Example: Input the command SAF:STEP2:DC 4000.
+Description: It means the voltage set for the DC withstand voltage test for the host
+STEP 2 is 4kV.
+
+Example: Input the command SAF:STEP2:DC?
+The tester returns 4.000000E+03.
+Description: The returned 4.000000E+03 means the voltage required for DC
+withstand voltage test for STEP 2 is 4kV.
+
+[:SOURce]:SAFety:STEP<n>:DC:LIMit:ARC < numeric value >
+It sets the ARC test value for selected STEP. The unit is Ampere (A).
+Range: 0 or 0.001~0.010, 0 is OFF.
+Example: Input the command SAF:STEP2:DC:LIM:ARC 0.0025.
+Description: It means the ACR test value is set to 2.5mA for the host STEP 2.
+[:SOURce]:SAFEty:STEP<n>:DC:LIMit:ARC?
+It queries the ARC test value for selected STEP.
+
+Example: Input the command SAF:STEP2:DC:LIM:ARC?
+The tester returns 2.500000E-03.
+Description: The returned 2.500000E-03 means the ARC test value is set to
+2.5mA for the host STEP 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

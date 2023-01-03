@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vCheckTester xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="4.0" xmlns="Valor.vCheckTester.xsd" OperatorNumber="admin">
+<Unit Timestamp="2020-07-14T13:13:44" SerialNumber="K82708K4301234" DateTimeStart="2020-07-14T13:13:33" DateTimeEnd="2020-07-14T13:13:44" xmlns="Valor.vCheckTester.xsd" StatusCode="PASS">
+<Measurement DateTime="2020-07-14T13:13:44" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.332" Name="Read Voltage" StatusCode="PASS" />
+<Measurement DateTime="2020-07-14T13:13:44" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.332" Name="Read Voltage" StatusCode="PASS" />
+<Measurement DateTime="2020-07-14T13:13:44" MeasurementUnit="V" LowerLimit="5" UpperLimit="5.5" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="5.332" Name="Read Voltage" StatusCode="PASS" />
+<Header TestFixtureNumber="0003173138"/>
+</Unit>
+</vCheckTester>

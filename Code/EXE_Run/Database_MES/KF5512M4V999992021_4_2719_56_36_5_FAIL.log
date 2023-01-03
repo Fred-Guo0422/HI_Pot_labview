@@ -1,0 +1,11 @@
+<?xml version='1.0'  encoding='UTF-8' standalone='no' ?>
+<vCheckTester xmlns=xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="4.0" xmlns="Valor.vCheckTester.xsd" OperatorNumber="Admin"
+<Unit Timestamp="2021-4-27 T 19:56:25" SerialNumber="KF5512M4V99999" DateTimeStart="2021-4-27 T 19:56:25" DateTimeEnd="2021-4-27 T 19:56:36" xmlns="Valor.vCheckTester.xsd" StatusCode="FAIL">
+ <Symptom Name="IR Fail ="Unknown">
+<Message>LowerLimit=10 UpperLimit=1.1 value=+9.910000E+37</Message>
+<Measurement DateTime="2021/4/27 19:56:25" MeasurementUnit="mA" LowerLimit="3" UpperLimit="10" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="+3.858971E-05" Name="AC" StatusCode="FAIL" />
+<Measurement DateTime="2021/4/27 19:56:25" MeasurementUnit="mA" LowerLimit="1.1" UpperLimit="10" ValueUnit="Double" xmlns="Valor.vCheckTester.xsd" Value="+9.910000E+37" Name="IR" StatusCode="FAIL" />
+</Symptom>
+<Header TestFixtureNumber="FN0001"/>
+</Unit>
+</vCheckTester>
